@@ -16,6 +16,6 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build the Docker images
     - run: |
-        cd client && docker build . --file Dockerfile --tag aca-client:$(date +%s)
+        cd client && docker build . --file Dockerfile --tag aca-client:latest
         cd ..
-        cd server && docker build . --file Dockerfile --tag aca-server:$(date +%s)
+        cd server && docker build . --file Dockerfile --tag aca-server:latest

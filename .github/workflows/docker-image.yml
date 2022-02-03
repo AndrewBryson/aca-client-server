@@ -15,6 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker images
-    - run: cd client && docker build . --file Dockerfile --tag aca-client:$(date +%s)
-    - run: cd ..
-    - run: cd server && docker build . --file Dockerfile --tag aca-server:$(date +%s)
+    - run: |
+        cd client && docker build . --file Dockerfile --tag aca-client:$(date +%s)
+        cd ..
+        cd server && docker build . --file Dockerfile --tag aca-server:$(date +%s)
